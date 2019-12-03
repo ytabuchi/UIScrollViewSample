@@ -1,29 +1,100 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="213">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="213">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--UIScrollView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jxug_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1212">
+                                <rect key="frame" x="132" y="85" width="150" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="1220"/>
+                                    <constraint firstAttribute="width" constant="150" id="1221"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom of screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1846" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="695.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1850" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="187" width="374" height="1000"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="1855" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="1000"/>
+                                        <color key="backgroundColor" colorSpace="custom" customColorSpace="sRGB" red="0.8321695924" green="0.985483706" blue="0.4733308554" alpha="0.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top of scroll view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1862" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="8" y="8" width="358" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom of scroll view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1863" translatesAutoresizingMaskIntoConstraints="NO">
+                                                <rect key="frame" x="8" y="971.5" width="358" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint id="1861" firstAttribute="height" constant="1000"/>
+                                            <constraint id="1864" firstAttribute="bottom" secondItem="1863" secondAttribute="bottom" constant="8"/>
+                                            <constraint id="1865" firstAttribute="trailing" secondItem="1863" secondAttribute="trailing" constant="8"/>
+                                            <constraint id="1866" firstItem="1863" firstAttribute="leading" secondItem="1855" secondAttribute="leading" constant="8"/>
+                                            <constraint id="2105" firstItem="1862" firstAttribute="top" secondItem="1855" secondAttribute="top" constant="8"/>
+                                            <constraint id="2106" firstAttribute="trailing" secondItem="1862" secondAttribute="trailing" constant="8"/>
+                                            <constraint id="2107" firstItem="1862" firstAttribute="leading" secondItem="1855" secondAttribute="leading" constant="8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="1856" firstItem="1855" firstAttribute="top" secondItem="1850" secondAttribute="top"/>
+                                    <constraint id="1857" firstItem="1855" firstAttribute="leading" secondItem="1850" secondAttribute="leading"/>
+                                    <constraint id="1858" firstItem="1855" firstAttribute="trailing" secondItem="1850" secondAttribute="trailing"/>
+                                    <constraint id="1859" firstItem="1855" firstAttribute="bottom" secondItem="1850" secondAttribute="bottom"/>
+                                    <constraint id="1860" firstItem="1855" firstAttribute="width" secondItem="1850" secondAttribute="width"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1212" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="1216"/>
+                            <constraint firstItem="1212" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1222"/>
+                            <constraint id="1847" firstItem="wfy-db-euE" firstAttribute="top" secondItem="1846" secondAttribute="bottom" constant="20"/>
+                            <constraint id="1848" firstItem="1846" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="1849" firstItem="1846" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="1851" firstItem="1850" firstAttribute="top" secondItem="1212" secondAttribute="bottom" constant="8"/>
+                            <constraint id="1852" firstItem="1850" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin"/>
+                            <constraint id="1853" firstItem="1850" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin"/>
+                            <constraint id="1854" firstItem="1846" firstAttribute="top" secondItem="1850" secondAttribute="bottom" constant="8"/>
+                        </constraints>
                     </view>
-                    <navigationItem title="UIScrollView" id="282" key="navigationItem"/>
+                    <navigationItem key="navigationItem" title="UIScrollView" id="282"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="43"/>
+            <point key="canvasLocation" x="1155.073" y="42.3913"/>
         </scene>
+        <!--Navigation Controller-->
         <scene sceneID="212">
             <objects>
                 <navigationController id="213" sceneMemberID="viewController">
@@ -32,7 +103,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="283" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="283"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="216" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,4 +111,7 @@
             <point key="canvasLocation" x="208" y="39"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jxug_logo.png" width="500" height="365.5"/>
+    </resources>
 </document>

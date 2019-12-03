@@ -133,5 +133,8 @@
             <DependentUpon>ViewController.cs</DependentUpon>
         </Compile>
     </ItemGroup>
+    <ItemGroup>
+      <BundleResource Include="Resources\jxug_logo%402x.png" />
+    </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
